@@ -156,3 +156,13 @@ export default function EditInvoiceForm({
         </form>
     );
 }
+
+function ErrorField({errorFieldId, errorMessage}: {errorFieldId: string; errorMessage: string | null | undefined}) {
+    return <div id={errorFieldId} aria-live="polite" aria-atomic="true">
+        {errorMessage && (
+            <p className="mt-2 text-sm text-red-500">
+                {errorMessage}
+            </p>
+        )}
+    </div>
+}

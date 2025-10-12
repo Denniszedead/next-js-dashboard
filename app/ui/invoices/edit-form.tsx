@@ -128,21 +128,9 @@ export default function EditInvoiceForm({
                             </div>
                         </div>
                     </div>
-                    <div id="invoice-status-error" aria-live="polite" aria-atomic="true">
-                        {state.errors?.status && state.errors?.status.map((error) => (
-                            <p className="mt-2 text-sm text-red-500">
-                                {error}
-                            </p>
-                        ))}
-                    </div>
+                    <ErrorField errorFieldId="invoice-status-error" errorMessage={state.errors?.status?.[0]} />
                 </fieldset>
-                <div id="overall-form-error" aria-live="polite" aria-atomic="true">
-                    {state.message && (
-                        <p className="mt-2 text-sm text-red-500">
-                            {state.message}
-                        </p>
-                    )}
-                </div>
+                <ErrorField errorFieldId="overall-form-error" errorMessage={state.message} />
             </div>
             <div className="mt-6 flex justify-end gap-4">
                 <Link

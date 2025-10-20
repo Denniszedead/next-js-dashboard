@@ -3,7 +3,7 @@ import {Metadata} from "next";
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | Dashboard',
+        template: '%s | Acme Dashboard',
         default: 'Dashboard',
     },
 }
